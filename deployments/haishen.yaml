@@ -1,0 +1,31 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: haishen
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: haishen
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: haishen
+        tier: frontend
+    spec:
+      containers:
+      - name: haishen-container
+        image: yuhenabc/haishen
+        ports:
+        - containerPort: 80
+        env:
+        - name: ENV
+          value: dev
+        resources:
+          requests:
+            cpu: 1m
+            memory: 25Mi
+          limits:
+            cpu: 100m
+            memory: 50Mi

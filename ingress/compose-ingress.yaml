@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: compose-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: compose.example.com
+    http:
+      paths:
+      - path: /haishen
+        pathType: Prefix
+        backend:
+          service:
+            name: haishen-service
+            port:
+              number: 80
+      - path: /xiuluo
+        pathType: Prefix
+        backend:
+          service:
+            name: xiuluo-service
+            port:
+              number: 80
