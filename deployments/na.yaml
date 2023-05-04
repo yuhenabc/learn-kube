@@ -1,0 +1,33 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: na
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: na
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: na
+        tier: frontend
+    spec:
+      containers:
+      - name: na-container
+        image: waterarmy-docker.pkg.coding.net/spa/room/na:coding-ci-kc8-1gv97bojf
+        ports:
+        - containerPort: 80
+        env:
+        - name: ENV
+          value: dev
+        resources:
+          requests:
+            cpu: 1m
+            memory: 25Mi
+          limits:
+            cpu: 100m
+            memory: 50Mi
+      imagePullSecrets:
+      - name: coding-spa

@@ -1,0 +1,33 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: room
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: room
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: room
+        tier: frontend
+    spec:
+      containers:
+      - name: room-container
+        image: waterarmy-docker.pkg.coding.net/spa/room/room:coding-ci-2g8-1gv96kho0
+        ports:
+        - containerPort: 80
+        env:
+        - name: ENV
+          value: dev
+        resources:
+          requests:
+            cpu: 1m
+            memory: 25Mi
+          limits:
+            cpu: 100m
+            memory: 50Mi
+      imagePullSecrets:
+      - name: coding-spa
