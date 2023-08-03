@@ -1,22 +1,22 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: na
+  name: nie
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: na
+      app: nie
       tier: frontend
   template:
     metadata:
       labels:
-        app: na
+        app: nie
         tier: frontend
     spec:
       containers:
-      - name: na-container
-        image: waterarmy-docker.pkg.coding.net/spa/room/na:coding-ci-pgl-1h6t5p6ai
+      - name: nie-container
+        image: waterarmy-docker.pkg.coding.net/spa/room/nie:coding-ci-eto-1h6t4qneu
         ports:
         - containerPort: 80
         env:

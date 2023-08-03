@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: tui-container
-        image: waterarmy-docker.pkg.coding.net/spa/room/tui:coding-ci-j68-1gv972uif
+        image: waterarmy-docker.pkg.coding.net/spa/room/tui:coding-ci-6ro-1h6t5olig
         ports:
         - containerPort: 80
         env:
