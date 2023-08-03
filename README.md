@@ -25,7 +25,7 @@ Learn kubenetes!
 #### expose dashboard
 
 ```bash
-kubectl apply -f ./ingress/dashboard-ingress.yaml -n kubernetes-dashboard
+kubectl apply -f ingress/dashboard-ingress.yaml -n kubernetes-dashboard
 ```
 
 ### create
@@ -33,23 +33,23 @@ kubectl apply -f ./ingress/dashboard-ingress.yaml -n kubernetes-dashboard
 #### create some namespace
 
 ```bash
-kubectl apply -f ./namespaces/xxx.yaml
+kubectl apply -f namespaces/xxx.yaml
 ```
 
 #### create some deployments
 
 ```bash
-kubectl apply -f ./deployments/xxx.yaml -n xxx
+kubectl apply -f deployments/xxx.yaml -n xxx
 ```
 
 #### create some services
 
 ```bash
-kubectl apply -f ./services/xxx-service.yaml -n xxx
+kubectl apply -f services/xxx-service.yaml -n xxx
 ```
 
 #### create some ingress
 
 ```bash
-kubectl apply -f ./ingress/xxx-ingress.yaml -n xxx
+kubectl apply -f ingress/xxx-ingress.yaml -n xxx
 ```
