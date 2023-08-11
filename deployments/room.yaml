@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: room-container
-        image: waterarmy-docker.pkg.coding.net/spa/room/room:coding-ci-2g8-1gv96kho0
+        image: waterarmy-docker.pkg.coding.net/spa/room/room:coding-ci-q58-1h77ek8p0
         ports:
         - containerPort: 80
         env:

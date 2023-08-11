@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: na-container
-        image: waterarmy-docker.pkg.coding.net/spa/room/na:coding-ci-pgl-1h6t5p6ai
+        image: waterarmy-docker.pkg.coding.net/spa/room/na:coding-ci-e7j-1h79r74la
         ports:
         - containerPort: 80
         env:

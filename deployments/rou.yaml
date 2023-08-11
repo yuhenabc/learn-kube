@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: rou-container
-        image: waterarmy-docker.pkg.coding.net/spa/room/rou:coding-ci-ilg-1h6t4hns1
+        image: waterarmy-docker.pkg.coding.net/spa/room/rou:coding-ci-1e3-1h79rb2hd
         ports:
         - containerPort: 80
         env:

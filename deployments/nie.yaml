@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nie-container
-        image: waterarmy-docker.pkg.coding.net/spa/room/nie:coding-ci-eto-1h6t4qneu
+        image: waterarmy-docker.pkg.coding.net/spa/room/nie:coding-ci-7uo-1h79ren7g
         ports:
         - containerPort: 80
         env:
