@@ -22,33 +22,51 @@ Learn kubenetes!
 ./shells/tunnel.sh
 ```
 
-#### expose dashboard
+### enable dashboard (only once)
+
+```bash
+minikube addons enable dashboard
+```
+
+#### expose dashboard (only once)
 
 ```bash
 kubectl apply -f ingress/dashboard-ingress.yaml -n kubernetes-dashboard
 ```
 
+### enable portainer (only once)
+
+```bash
+minikube addons enable portainer
+```
+
+#### expose portainer (only once)
+
+```bash
+kubectl apply -f ingress/portainer-ingress.yaml -n portainer
+```
+
 ### create
 
-#### create some namespace
+#### create one namespace
 
 ```bash
 kubectl apply -f namespaces/xxx.yaml
 ```
 
-#### create some deployments
+#### create one deployment
 
 ```bash
 kubectl apply -f deployments/xxx.yaml -n xxx
 ```
 
-#### create some services
+#### create one service
 
 ```bash
 kubectl apply -f services/xxx-service.yaml -n xxx
 ```
 
-#### create some ingress
+#### create one ingress
 
 ```bash
 kubectl apply -f ingress/xxx-ingress.yaml -n xxx
